@@ -10,7 +10,7 @@ This is a basic electron example that shows how to save javascript console outpu
     * [Renderer process](https://www.electronjs.org/docs/latest/tutorial/process-model#the-renderer-process): process for rendering web content (in this example, examplejs.js) _Note: electron spawns an individual renderer process for each BrowserWindow you create; in this example, just using a single renderer process and logfile._
 * Log level is set to _error_ so that only `console.error` output is written; this can be changed in `main.js`.
 * Uses lightweight npm package <a href="https://www.npmjs.com/package/electron-log" target="_blank">electron-log</a>
-* Uses console.log statements just like normal; you won't need to change any existing console statements in your project. It simply maps those statements to the electron-log instance, by one line of code in main.js
+* Uses `console` statements just like normal; you won't need to change any existing `console` statements in your project. It simply maps those statements to the electron-log instance, by one line of code in main.js
 * Console output still appears on your cmd where you are running npm start
 * This example can be extended to be used in production apps packaged by [electron-packager](https://www.npmjs.com/package/electron-packager).
 
