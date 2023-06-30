@@ -70,6 +70,11 @@ log.transports.file.resolvePath = () => path.join(main_logfile);
 
 // set log level (error, warn, info, verbose, debug, or silly)
 // default is "silly" level which logs everything
+// EDIT: Currently this is only working to set log-level
+// of main process logs; not renderer logs.
+//  - consider looking at electron cmd switches
+//    https://www.electronjs.org/docs/latest/api/command-line-switches#--log-leveln
+//    I was unable to figure out
 log.transports.console.level = 'error';
 log.transports.file.level = 'error';
 // overwrite console.log and others and set it to electron-log's

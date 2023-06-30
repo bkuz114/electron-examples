@@ -26,7 +26,7 @@
         </li>
         <li>
 
-            Log level is set to <i>error</i> so that only console.error output is written; this can be changed in `main.js`
+            Log level is set to <i>error</i> so that only console.error output is written; this can be changed in `main.js` (Note to self: this is only having an impact on main process logs; renderer are still printing to default level; I think electron cmd switches I need to figure out).
         </li>
         <li>
             Uses lightweight npm package <a href="https://www.npmjs.com/package/electron-log" target="_blank">electron-log</a>
