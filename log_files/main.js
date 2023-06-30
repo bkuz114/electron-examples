@@ -70,8 +70,8 @@ log.transports.file.resolvePath = () => path.join(main_logfile);
 
 // set log level (error, warn, info, verbose, debug, or silly)
 // default is "silly" level which logs everything
-log.transports.console.level = 'info';
-log.transports.file.level = 'info';
+log.transports.console.level = 'error';
+log.transports.file.level = 'error';
 // overwrite console.log and others and set it to electron-log's
 Object.assign(console, log.functions);
 
