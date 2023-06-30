@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="example.css" media="screen,projection" />
+    <title>Basic Electron App</title>
+</head>
+
+<body>
+    This is a basic electron example that shows how to generate log files for javascript console output during app runs.
+
+    <ul>
+        <li>
+            Creates a new timestampped directory each app run. (Root log dir is 'logs' in same dir as main.js; it will get created on the first run of this app.)
+        </li>
+        <li>
+            Separate log files are genearted for the <a href="https://www.electronjs.org/docs/latest/tutorial/process-model#the-main-process" target="_blank">main</a> and <a href="https://www.electronjs.org/docs/latest/tutorial/process-model#the-renderer-process" target="_blank">renderer processes</a>.
+            <ul>
+                <li>
+                    <b><a href="https://www.electronjs.org/docs/latest/tutorial/process-model#the-main-process" target="_blank">Main process</a></b>: nodejs environment that manages the app (in this example, main.js)
+                </li>
+                <li>
+                    <b><a href="https://www.electronjs.org/docs/latest/tutorial/process-model#the-renderer-process" target="_blank">Renderer process</a></b>: process for rendering web content (in this example, examplejs.js) <i>Note: electron spawns an individual renderer process for each BrowserWindow you create; in this example, just using a single renderer process and logfile.</i>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            Uses lightweight npm package <a href="https://www.npmjs.com/package/electron-log" target="_blank">electron-log</a>
+        </li>
+        <li>
+            Uses console.log statements just like normal; you won't need to change any existing console statements in your project. It simply maps those statements to the electron-log instance, by one line of code in main.js
+        </li>
+        <li>
+            Console output still appears on your cmd where you are running npm start
+        </li>
+        <li>
+            This example can be extended to be used in production apps packaged by <a href="https://www.npmjs.com/package/electron-packager" target="_blank">electron-packager</a>.
+        </li>
+    </ul>
+
+    Hope this helps someone.
+    <script src="examplejs.js"></script>
+</body>
+
+</html>
