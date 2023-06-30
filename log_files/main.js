@@ -75,8 +75,10 @@ log.transports.file.level = 'error';
 // overwrite console.log and others and set it to electron-log's
 Object.assign(console, log.functions);
 
-console.log("Test regular console log - should still write on cmd terminal when running npm start, but won't appear in external log");
-console.error("Test regular error log - should see this on cmd line, and should also appear in external log");
+console.log("Test console.log");
+console.info("Test console.info");
+console.warn("Test console.warn");
+console.error("Test console.error");
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.

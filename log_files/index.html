@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    This is a basic electron example that shows how to generate log files for javascript console output during app runs.
+    This is a basic electron example that shows how to save javascript console output from the app into logfiles.
 
     <ul>
         <li>
@@ -24,7 +24,10 @@
                 </li>
             </ul>
         </li>
+        <li>
 
+            Log level is set to <i>error</i> so that only console.error output is written; this can be changed in `main.js`
+        </li>
         <li>
             Uses lightweight npm package <a href="https://www.npmjs.com/package/electron-log" target="_blank">electron-log</a>
         </li>
